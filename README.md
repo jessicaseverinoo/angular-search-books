@@ -9,3 +9,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ## Módulo 01: Programação reativa
 
 Conteúdo: - Utilizar a arquitetura de componentes de apresentação e componentes inteligentes; - Lidar com a biblioteca RxJS; - Aplicar o padrão Observer;
+
+## Módulo 02: Ciclo do observable
+
+Conteúdo: - Utilizar os métodos next, error e complete; - Unsubscribe do observable; - Adequar a resposta da API para o formato necessário;
