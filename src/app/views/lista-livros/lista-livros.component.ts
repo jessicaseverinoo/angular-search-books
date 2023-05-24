@@ -1,6 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Livro } from 'src/app/models/interfaces';
+import { Item, Livro } from 'src/app/models/interfaces';
+import { LivroVolumeInfo } from 'src/app/models/livroVolumeInfo';
 import { LivroService } from 'src/app/service/livro.service';
 
 @Component({
@@ -32,23 +33,10 @@ export class ListaLivrosComponent implements OnDestroy {
   //   textFile: (data as any).textFile,
   // })
 
-  livrosResultadosParaLivros(items): Livro[] {
-    const livros: Livro[] = [];
-    items.forEach((item) => {
-      livros.push(
-        (this.livro = {
-          title: item.volumeInfo?.title,
-          authors: items.volumeInfo?.authors,
-          publisher: items.volumeInfo?.publisher,
-          publishedDate: items.volumeInfo?.publishedDate,
-          description: items.volumeInfo?.description,
-          previewLink: items.volumeInfo?.previewLink,
-          thumbnail: items.volumeInfo?.imageLinks?.thumbnail,
-        })
-      );
+  livrosResultadosParaLivros(items: Item[]): LivroVolumeInfo[] {
+    return items.map((item) => {
+      return new LivroVolumeInfo(item);
     });
-
-    return livros;
   }
 
   ngOnDestroy() {
