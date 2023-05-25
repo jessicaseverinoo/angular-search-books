@@ -40,11 +40,19 @@ Conteúdo:
 
 ## Módulo 05: Otimizando a busca com RxJS
 
-Conteúdo
+Conteúdo:
 
 - Desenvolver uma busca dinâmica;
 - Utilizar o pipe async;
 - Encadear os operadores switchMap, filter e debounceTime para otimizar a performance da aplicação.
+
+## Módulo 06: Tratamento de erros
+
+Conteúdo:
+
+- Capturar erros com os operadores catchError e throwError;
+- Utilizar o operador EMPTY;
+- Mostrar mensagens de erro para a pessoa usuária.
 
 ## Anotações extras
 
@@ -63,6 +71,14 @@ Conteúdo
 - debounceTime - Operador de filtragem. Retorna um Observable que atrasa as emissões do Observable de origem pelo tempo especificado.
 
 - distinctUntilChanged - Operador de filtragem. Retorna um Observable que emite todos os valores enviados pelo observable de origem se forem distintos em comparação com o último valor emitido pelo observable de resultado.
+
+- catchError - Operador de Tratamento de Erros. Captura erros no observable manipulado retornando um novo observable ou lançando um erro.
+
+- throwError - Operador de Criação. Cria um observable que criará uma instância de erro e a enviará ao consumidor como um erro imediatamente após a assinatura.
+
+- EMPTY - Operador de Criação. Cria um Observable simples que não emite itens para o Observer e imediatamente emite uma notificação de complete.
+
+- of - Operador de Criação. Converte os argumentos em observable. Um Observable que emite os argumentos descritos e depois conclui.
 
 #### Para saber mais: pipes do Angular
 
